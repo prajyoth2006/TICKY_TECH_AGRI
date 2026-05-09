@@ -35,11 +35,11 @@ export default function Hero() {
   return (
     <section className="relative min-h-[90vh] pt-32 pb-20 lg:pt-0 lg:pb-0 overflow-hidden bg-white flex items-center">
       {/* Subtle Tech Grid Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-size-[40px_40px] pointer-events-none" />
       
       {/* Soft Glow Orbs */}
-      <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[800px] h-[800px] bg-brand-600/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[600px] h-[600px] bg-teal-400/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-200 h-200 bg-brand-600/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-150 h-150 bg-teal-400/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
@@ -65,7 +65,7 @@ export default function Hero() {
             >
               Ticky Tech — <br className="hidden lg:block" />
               <span className="relative">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-teal-400">
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-600 to-teal-400">
                   smart automation
                 </span>
                 {/* Decorative underline */}
@@ -83,7 +83,7 @@ export default function Hero() {
             >
               Making future-ready, affordable, and safe automation solutions 
               for Indian homes and industries. 
-              <span className="block mt-4 font-semibold text-navy-900 bg-brand-50 inline-block px-3 py-1 rounded-lg">
+              <span className="block mt-4 font-semibold text-navy-900 bg-brand-50 px-3 py-1 rounded-lg">
                 Affordable solutions for all – from villages to villas.
               </span>
             </motion.p>
@@ -109,10 +109,10 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="relative h-[500px] w-full hidden md:flex items-center justify-center mt-12 lg:mt-0"
+            className="relative h-125 w-full hidden md:flex items-center justify-center mt-12 lg:mt-0"
           >
             {/* Center Hub Card */}
-            <div className="relative z-20 w-80 bg-white/70 backdrop-blur-xl border border-white rounded-[2rem] p-6 shadow-2xl shadow-brand-900/10">
+            <div className="relative z-20 w-80 bg-white/70 backdrop-blur-xl border border-white rounded-4xl p-6 shadow-2xl shadow-brand-900/10">
               <div className="flex justify-between items-center mb-6">
                 <div>
                   <h3 className="font-bold text-navy-900 text-xl">My Home</h3>
@@ -120,7 +120,7 @@ export default function Hero() {
                     <Wifi className="w-3 h-3 text-teal-500" /> Online
                   </p>
                 </div>
-                <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-brand-600 to-teal-400 flex items-center justify-center text-white shadow-lg">
+                <div className="w-12 h-12 rounded-full bg-linear-to-tr from-brand-600 to-teal-400 flex items-center justify-center text-white shadow-lg">
                   <Home className="w-6 h-6" />
                 </div>
               </div>
