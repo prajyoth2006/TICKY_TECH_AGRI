@@ -13,7 +13,7 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               >
-                <h4 className="text-brand-600 font-bold uppercase tracking-widest text-sm mb-4">Our Story</h4>
+                <h4 className="text-brand-600 font-bold uppercase tracking-widest text-xl mb-4">Our Story</h4>
                 <h2 className="text-4xl md:text-6xl font-display font-bold text-navy-900 mb-8 tracking-tight">
                   Born from a need for <br /> safety and simplicity
                 </h2>

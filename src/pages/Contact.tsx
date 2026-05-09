@@ -14,9 +14,9 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <h4 className="text-brand-600 font-bold uppercase tracking-widest text-sm mb-4">Contact Us</h4>
+                <h4 className="text-brand-600 font-bold uppercase tracking-widest text-xl mb-4">Contact Us</h4>
                 <h2 className="text-4xl md:text-6xl font-display font-bold text-navy-900 mb-8 tracking-tight">
-                  Let's talk about <br /> your next project.
+                  Let's talk about <br /> your next project
                 </h2>
                 <p className="text-lg text-slate-600 mb-12 max-w-lg leading-relaxed">
                   Have a question about our solutions? Our team is here to help you navigate 
