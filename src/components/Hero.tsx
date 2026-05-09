@@ -1,75 +1,180 @@
 import { motion } from 'motion/react';
-import { ArrowRight, ChevronRight } from 'lucide-react';
+import { 
+  ArrowRight, 
+  ChevronRight, 
+  Lightbulb, 
+  Thermometer, 
+  ShieldCheck, 
+  Zap,
+  Wifi,
+  Home
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
+  // Animation variants for floating elements
+  // Animation variants for floating elements
+  const floatingAnimation = {
+    y: [0, -15, 0],
+    transition: {
+      duration: 5,
+      repeat: Infinity,
+      ease: "easeInOut" as const // <-- Add 'as const' here
+    }
+  };
+
+  const floatingAnimationReverse = {
+    y: [0, 15, 0],
+    transition: {
+      duration: 6,
+      repeat: Infinity,
+      ease: "easeInOut" as const // <-- Add 'as const' here
+    }
+  };
+
   return (
-    <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
-      {/* Background Embellishments */}
-      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] bg-brand-600/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[500px] h-[500px] bg-navy-900/5 rounded-full blur-3xl pointer-events-none" />
+    <section className="relative min-h-[90vh] pt-32 pb-20 lg:pt-0 lg:pb-0 overflow-hidden bg-white flex items-center">
+      {/* Subtle Tech Grid Background */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
+      
+      {/* Soft Glow Orbs */}
+      <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[800px] h-[800px] bg-brand-600/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[600px] h-[600px] bg-teal-400/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+          
+          {/* Left Column: Copy & CTAs */}
+          <div className="text-center lg:text-left z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-brand-700 text-sm font-semibold mb-8 shadow-sm"
+            >
+              <span className="flex h-2 w-2 rounded-full bg-brand-500 animate-pulse"></span>
+              <span>New Generation IoT is Here</span>
+              <ChevronRight className="w-4 h-4 text-brand-500" />
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-navy-900 tracking-tight leading-[1.1] mb-6"
+            >
+              Ticky Tech — <br className="hidden lg:block" />
+              <span className="relative">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-teal-400">
+                  smart automation
+                </span>
+                {/* Decorative underline */}
+                <svg className="absolute w-full h-3 -bottom-1 left-0 text-teal-400/30" viewBox="0 0 100 10" preserveAspectRatio="none">
+                  <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="4" fill="transparent" />
+                </svg>
+              </span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="max-w-xl mx-auto lg:mx-0 text-lg md:text-xl text-slate-600 mb-8 leading-relaxed"
+            >
+              Making future-ready, affordable, and safe automation solutions 
+              for Indian homes and industries. 
+              <span className="block mt-4 font-semibold text-navy-900 bg-brand-50 inline-block px-3 py-1 rounded-lg">
+                Affordable solutions for all – from villages to villas.
+              </span>
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4"
+            >
+              <Link to="/solutions" className="w-full sm:w-auto bg-navy-900 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-brand-600 transition-all duration-300 flex items-center justify-center shadow-lg shadow-navy-900/20 active:scale-95 group">
+                Explore Solutions
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link to="/contact" className="w-full sm:w-auto bg-white border-2 border-slate-200 text-slate-700 px-8 py-4 rounded-full font-bold text-lg hover:border-brand-600 hover:text-brand-600 transition-all duration-300 active:scale-95 text-center shadow-sm">
+                Contact Us
+              </Link>
+            </motion.div>
+          </div>
+
+          {/* Right Column: Glassmorphism Smart Home Mockup */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-600/10 text-brand-700 text-xs font-semibold mb-8 border border-brand-600/20"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="relative h-[500px] w-full hidden md:flex items-center justify-center mt-12 lg:mt-0"
           >
-            <span>New Generation IoT is Here</span>
-            <ChevronRight className="w-3 h-3" />
-          </motion.div>
+            {/* Center Hub Card */}
+            <div className="relative z-20 w-80 bg-white/70 backdrop-blur-xl border border-white rounded-[2rem] p-6 shadow-2xl shadow-brand-900/10">
+              <div className="flex justify-between items-center mb-6">
+                <div>
+                  <h3 className="font-bold text-navy-900 text-xl">My Home</h3>
+                  <p className="text-sm text-slate-500 flex items-center gap-1">
+                    <Wifi className="w-3 h-3 text-teal-500" /> Online
+                  </p>
+                </div>
+                <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-brand-600 to-teal-400 flex items-center justify-center text-white shadow-lg">
+                  <Home className="w-6 h-6" />
+                </div>
+              </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-display font-bold text-navy-900 tracking-tight leading-[1.1] mb-6"
-          >
-            Ticky Tech — IoT-based <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-teal-400">
-              smart automation
-            </span>
-          </motion.h1>
+              {/* Grid of smart controls */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white rounded-2xl p-4 shadow-sm border border-slate-100 flex flex-col items-center justify-center gap-2 group hover:border-brand-500 transition-colors cursor-pointer">
+                  <div className="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
+                    <Lightbulb className="w-5 h-5 text-yellow-500" />
+                  </div>
+                  <span className="text-sm font-semibold text-slate-700">Lights</span>
+                  <span className="text-xs text-slate-400">4 Active</span>
+                </div>
+                
+                <div className="bg-brand-600 rounded-2xl p-4 shadow-md shadow-brand-600/20 flex flex-col items-center justify-center gap-2 cursor-pointer">
+                  <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                    <Thermometer className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="text-sm font-semibold text-white">AC</span>
+                  <span className="text-xs text-brand-100">22°C</span>
+                </div>
+              </div>
+            </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="max-w-2xl mx-auto text-lg md:text-xl text-slate-600 mb-10 leading-relaxed"
-          >
-            Making future-ready, affordable, and safe automation solutions 
-            for Indian homes and industries. 
-            <span className="block mt-4 font-bold text-navy-900">
-              Affordable solutions for all – from villages to villas
-            </span>
-          </motion.p>
+            {/* Floating Widget 1: Security */}
+            <motion.div 
+              animate={floatingAnimation}
+              className="absolute top-10 right-4 z-30 bg-white/80 backdrop-blur-md border border-white p-4 rounded-2xl shadow-xl shadow-slate-200/50 flex items-center gap-4"
+            >
+              <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center">
+                <ShieldCheck className="w-5 h-5 text-emerald-600" />
+              </div>
+              <div>
+                <p className="text-sm font-bold text-navy-900">Security</p>
+                <p className="text-xs text-emerald-600 font-medium">System Armed</p>
+              </div>
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4"
-          >
-            <Link to="/solutions" className="w-full sm:w-auto bg-navy-900 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-800 transition-all flex items-center justify-center shadow-xl shadow-navy-900/20 active:scale-95 group">
-              Explore Solutions
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link to="/contact" className="w-full sm:w-auto bg-white border-2 border-slate-200 text-slate-900 px-8 py-4 rounded-full font-bold text-lg hover:border-brand-600 hover:text-brand-600 transition-all active:scale-95 text-center">
-              Contact Us
-            </Link>
+            {/* Floating Widget 2: Energy */}
+            <motion.div 
+              animate={floatingAnimationReverse}
+              className="absolute bottom-16 left-0 z-30 bg-white/80 backdrop-blur-md border border-white p-4 rounded-2xl shadow-xl shadow-slate-200/50 flex items-center gap-4"
+            >
+              <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+                <Zap className="w-5 h-5 text-blue-600" />
+              </div>
+              <div>
+                <p className="text-sm font-bold text-navy-900">Energy Saved</p>
+                <p className="text-xs text-slate-500">32% this month</p>
+              </div>
+            </motion.div>
+
           </motion.div>
         </div>
-
-        {/* Demo Apperance / Visual mock */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-16 relative mx-auto max-w-5xl"
-        >
-        </motion.div>
       </div>
     </section>
   );
