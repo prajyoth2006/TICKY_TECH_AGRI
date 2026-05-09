@@ -1,0 +1,124 @@
+import Hero from '../components/Hero';
+import { motion, Variants } from 'motion/react'; 
+import { ShieldCheck, Smartphone, Activity, Cpu, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+export default function Home() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,  // <-- Change this! (Lower = boxes appear faster together. AI used 0.1)
+        delayChildren: 0.2,    // <-- How long to wait before the first box starts
+      }
+    }
+  };
+
+  // 2. THIS CONTROLS THE MOVEMENT OF EACH INDIVIDUAL BOX
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 40 }, // <-- Change 'y' (Larger number = drops in from further down)
+    show: { 
+        opacity: 1, 
+        y: 0, 
+        transition: { 
+            duration: 0.6, // <-- Change this! (Lower = box moves faster. AI used 0.6 or 0.8)
+            ease: [0.22, 1, 0.36, 1] as const // This is the Apple-style smooth stop curve
+        } 
+    }
+  };
+
+  return (
+    <div className="bg-white overflow-hidden">
+      <Hero />
+      
+      {/* Engineered For The Future Section */}
+      <section className="py-32 relative group">
+        
+        {/* Subtle Tech Grid Background (Kept from your current code because it looks premium!) */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
+        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-brand-600 opacity-10 blur-[100px]"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          
+          {/* Section Header */}
+          <div className="text-center mb-24">
+            
+            
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-6xl font-display font-bold text-navy-900 leading-[1.1]"
+            >
+              Engineered for the <br className="hidden md:block" />
+              <span className="text-slate-400">future of living.</span>
+            </motion.h2>
+          </div>
+
+          {/* 3 Pillar Blocks */}
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12"
+          >
+            {[
+              {
+                icon: ShieldCheck,
+                title: "Hardware-Level Shield",
+                desc: "Our proprietary 3-layer PCB defense prevents costly failures. Protecting your appliances from extreme surges and sags common in volatile grids.",
+                accent: "bg-blue-500"
+              },
+              {
+                icon: Cpu,
+                title: "Edge Resilience",
+                desc: "No internet? No problem. Localized processing ensures lightning-fast response times and uninterrupted automation",
+                accent: "bg-brand-500"
+              },
+              {
+                icon: Smartphone,
+                title: "Seamless Ecosystem",
+                desc: "A single, intuitive application to monitor analytics, set safety limits, and control your entire home seamlessly.",
+                accent: "bg-teal-500"
+              }
+            ].map((feature, i) => (
+              <motion.div
+                key={i}
+                variants={itemVariants}
+                className="group relative bg-white/60 backdrop-blur-xl border border-slate-200 rounded-[2.5rem] p-10 lg:p-12 hover:-translate-y-4 hover:shadow-2xl hover:shadow-brand-600/10 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col items-start text-left overflow-hidden"
+              >
+                {/* Visual Connector / Accent Color on Hover */}
+                <div className={`absolute left-10 top-0 h-1 w-12 ${feature.accent} rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500`} />
+
+                {/* Decorative Hover Glow inside card */}
+                <div className="absolute -right-10 -top-10 w-40 h-40 bg-brand-600/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                <div className="relative z-10 w-16 h-16 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center mb-10 group-hover:scale-110 group-hover:bg-white group-hover:shadow-xl group-hover:shadow-brand-600/10 transition-all duration-500">
+                  <feature.icon className="w-8 h-8 text-navy-900 group-hover:text-brand-600 transition-colors" />
+                </div>
+                
+                <h3 className="relative z-10 text-2xl font-display font-bold text-navy-900 mb-6 group-hover:translate-x-1 transition-transform duration-300">
+                  {feature.title}
+                </h3>
+                
+                <p className="relative z-10 text-slate-500 leading-relaxed font-light text-lg mb-8">
+                  {feature.desc}
+                </p>
+                
+                <div className="relative z-10 mt-auto pt-4 flex items-center text-brand-600 font-bold text-sm tracking-tight opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-500">
+                  <Link to="/solutions" className="flex items-center hover:underline">
+                    Learn Tech Specs <ChevronRight className="w-4 h-4 ml-1" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+    </div>
+  );
+}
