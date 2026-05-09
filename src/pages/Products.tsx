@@ -7,8 +7,8 @@ export default function Products() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 relative overflow-hidden px-4 text-center">
       
       {/* Subtle Tech Background Glows */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-600/5 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-teal-500/5 rounded-full blur-[80px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-brand-600/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-100 h-100 bg-teal-500/5 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="relative z-10 flex flex-col items-center max-w-2xl mx-auto">
         

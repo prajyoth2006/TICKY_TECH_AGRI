@@ -36,7 +36,7 @@ export default function Solutions() {
     <section id="solutions" className="py-24 md:py-32 bg-slate-50 relative">
       
       {/* Subtle Blueprint Grid Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -109,7 +109,7 @@ export default function Solutions() {
                   <h3 className="text-xl font-bold text-navy-900 mb-3 group-hover:text-brand-600 transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-slate-500 text-sm leading-relaxed flex-grow">
+                  <p className="text-slate-500 text-sm leading-relaxed grow">
                     {item.description}
                   </p>
                 </motion.div>

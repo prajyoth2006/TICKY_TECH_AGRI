@@ -59,10 +59,10 @@ export default function About() {
 
                   {/* Subtle Color Enhancement Overlay */}
                   {/* This makes the image look "cool" and high-tech without hiding colors */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-navy-900/40 via-transparent to-brand-600/5" />
+                  <div className="absolute inset-0 bg-linear-to-tr from-navy-900/40 via-transparent to-brand-600/5" />
 
                   {/* Modern Glassmorphism Text Block */}
-                  <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-navy-900/90 via-navy-900/50 to-transparent backdrop-blur-[2px]">
+                  <div className="absolute inset-x-0 bottom-0 p-8 bg-linear-to-t from-navy-900/90 via-navy-900/50 to-transparent backdrop-blur-[2px]">
                     <motion.p
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}

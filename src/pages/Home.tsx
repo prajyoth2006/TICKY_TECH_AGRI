@@ -1,6 +1,6 @@
 import Hero from '../components/Hero';
 import { motion, Variants } from 'motion/react'; 
-import { ShieldCheck, Smartphone, Activity, Cpu, ChevronRight } from 'lucide-react';
+import { ShieldCheck, Smartphone, Cpu, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
@@ -9,21 +9,20 @@ export default function Home() {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,  // <-- Change this! (Lower = boxes appear faster together. AI used 0.1)
-        delayChildren: 0.2,    // <-- How long to wait before the first box starts
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
       }
     }
   };
 
-  // 2. THIS CONTROLS THE MOVEMENT OF EACH INDIVIDUAL BOX
   const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 40 }, // <-- Change 'y' (Larger number = drops in from further down)
+    hidden: { opacity: 0, y: 40 },
     show: { 
         opacity: 1, 
         y: 0, 
         transition: { 
-            duration: 0.6, // <-- Change this! (Lower = box moves faster. AI used 0.6 or 0.8)
-            ease: [0.22, 1, 0.36, 1] as const // This is the Apple-style smooth stop curve
+            duration: 0.6,
+            ease: [0.22, 1, 0.36, 1] as const
         } 
     }
   };
@@ -33,18 +32,18 @@ export default function Home() {
       <Hero />
       
       {/* Engineered For The Future Section */}
-      <section className="py-32 relative group">
+      <section className="py-25 relative group">
         
-        {/* Subtle Tech Grid Background (Kept from your current code because it looks premium!) */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
-        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-brand-600 opacity-10 blur-[100px]"></div>
+        {/* MATCHED TO HERO: Subtle Tech Grid Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-size-[40px_40px] mask-[linear-gradient(to_bottom,white_60%,transparent_100%)] pointer-events-none" />
+        
+        {/* Soft Ambient Glow */}
+        <div className="absolute left-1/2 -translate-x-1/2 top-0 -z-10 h-125 w-full max-w-4xl rounded-full bg-brand-600/5 blur-[120px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
           {/* Section Header */}
           <div className="text-center mb-24">
-            
-            
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -75,7 +74,7 @@ export default function Home() {
               {
                 icon: Cpu,
                 title: "Edge Resilience",
-                desc: "No internet? No problem. Localized processing ensures lightning-fast response times and uninterrupted automation",
+                desc: "No internet? No problem. Localized processing ensures lightning-fast response times and uninterrupted automation.",
                 accent: "bg-brand-500"
               },
               {
@@ -118,7 +117,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
     </div>
   );
 }

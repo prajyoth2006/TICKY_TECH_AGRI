@@ -99,7 +99,7 @@ export default function Contact() {
                     <textarea 
                         rows={5}
                         placeholder="Tell us about your requirements..." 
-                        className="w-full px-8 py-6 rounded-[2rem] bg-white border border-slate-200 focus:border-brand-600 focus:outline-none transition-all text-navy-900 resize-none"
+                        className="w-full px-8 py-6 rounded-4xl bg-white border border-slate-200 focus:border-brand-600 focus:outline-none transition-all text-navy-900 resize-none"
                     />
                   </div>
 
