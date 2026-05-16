@@ -6,6 +6,8 @@ export default function About() {
       <section id="about" className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+            
+            {/* Left Column: Text Content */}
             <div className="flex-1">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -13,26 +15,28 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               >
-                <h4 className="text-brand-600 font-bold uppercase tracking-widest text-xl mb-4">Our Story</h4>
-                <h2 className="text-4xl md:text-6xl font-display font-bold text-navy-900 mb-8 tracking-tight">
-                  Born from a need for <br /> safety and simplicity
+                <h4 className="text-brand-600 font-bold uppercase tracking-widest text-xl mb-4">
+                  Our Story
+                </h4>
+                <h2 className="text-xl md:text-5xl font-display font-bold text-navy-900 mb-8 tracking-tight">
+                  Born from a need for <br /> precision and resilience
                 </h2>
+                
                 <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
-                  <div className="space-y-6 text-slate-600 leading-relaxed">
-                    <p>
-                      Ticky Tech is a hardware startup currently in its research and development phase, proudly incubated at the IIT Patna Incubation Centre. We started with a simple mission: to make high-quality IoT technology accessible to every Indian household. We realized that smart homes shouldn't be a luxury, and they shouldn't come at the cost of electrical safety.
-                    </p>
-                    <p>
-                      Backed by the deep-tech resources and rigorous engineering environment of IIT Patna, we are actively developing and testing proprietary solutions. Our focus is on building robust technology that will soon provide homes and industries with the reliability of enterprise systems at the cost of a daily convenience.
-                    </p>
-                    <p>
-                      Our vision is to bridge the digital divide in automation, bringing the exact same level of smart, safe control to a village home as we do to a luxury villa in the city.
-                    </p>
-                  </div>
+                  <p>
+                    Ticky Tech is an R&D-phase hardware startup incubated at the <strong className="text-navy-900">IIT Patna Incubation Centre</strong>. We build affordable, precision agritech solutions to ensure advanced indoor farming systems are no longer an overpriced luxury for Indian growers.
+                  </p>
+                  <p>
+                    Backed by IIT Patna's engineering ecosystem, we develop smart multi-sensor nodes that monitor and analyze critical parameters—<strong className="text-navy-900">CO2, relative humidity (RH), and temperature</strong>—locally at the farm edge, completely independent of stable internet.
+                  </p>
+                  <p>
+                    We bridge the gap between laboratory precision and rugged farm realities, empowering everything from rural greenhouses to urban vertical farms with data-driven climate control.
+                  </p>
                 </div>
               </motion.div>
             </div>
 
+            {/* Right Column: Image & Visuals */}
             <div className="flex-1 relative">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -41,7 +45,7 @@ export default function About() {
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                 className="group relative rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-2xl z-10 aspect-square p-3"
               >
-                {/* Professional Badge - Highlighting your IIT Patna roots */}
+                {/* Professional Badge */}
                 <div className="absolute top-8 right-8 z-30">
                   <div className="bg-brand-600/90 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-[0.2em] shadow-lg border border-white/20">
                     R&D Phase • IIT Patna
@@ -52,13 +56,12 @@ export default function About() {
                 <div className="relative h-full w-full overflow-hidden rounded-2xl">
                   <img
                     src="https://ecell.iitp.ac.in/IC/IC.png"
-                    alt="Innovation Lab"
+                    alt="Agri-Tech Innovation Lab"
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out"
                     referrerPolicy="no-referrer"
                   />
 
                   {/* Subtle Color Enhancement Overlay */}
-                  {/* This makes the image look "cool" and high-tech without hiding colors */}
                   <div className="absolute inset-0 bg-linear-to-tr from-navy-900/40 via-transparent to-brand-600/5" />
 
                   {/* Modern Glassmorphism Text Block */}
@@ -69,7 +72,7 @@ export default function About() {
                       transition={{ delay: 0.5 }}
                       className="text-white font-display font-medium text-lg md:text-xl italic leading-relaxed"
                     >
-                      Technology is at its best when it serves the most vulnerable
+                      Technology is at its best when it empowers those who feed us.
                     </motion.p>
 
                     <div className="flex items-center mt-6 space-x-3">
@@ -82,10 +85,11 @@ export default function About() {
                 </div>
               </motion.div>
 
-              {/* Decorative Glow - Adjusted for color depth */}
+              {/* Decorative Glow Elements */}
               <div className="absolute -bottom-12 -right-12 w-72 h-72 bg-brand-600/20 rounded-full blur-[100px] animate-pulse pointer-events-none" />
               <div className="absolute -top-12 -left-12 w-48 h-48 bg-teal-400/10 rounded-full blur-[80px] pointer-events-none" />
             </div>
+
           </div>
         </div>
       </section>

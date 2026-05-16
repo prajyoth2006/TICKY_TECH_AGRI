@@ -52,7 +52,7 @@ export default function Home() {
               className="text-4xl md:text-6xl font-display font-bold text-navy-900 leading-[1.1]"
             >
               Engineered for the <br className="hidden md:block" />
-              <span className="text-slate-400">future of living.</span>
+              <span className="text-slate-400">future of farming.</span>
             </motion.h2>
           </div>
 
@@ -67,20 +67,20 @@ export default function Home() {
             {[
               {
                 icon: ShieldCheck,
-                title: "Hardware-Level Shield",
-                desc: "Our proprietary 3-layer PCB defense prevents costly failures. Protecting your appliances from extreme surges and sags common in volatile grids.",
-                accent: "bg-blue-500"
+                title: "Built-In Protection",
+                desc: "Our devices are built tough to handle the sudden power spikes common on farms, keeping your expensive climate equipment safe from breaking.",
+                accent: "bg-emerald-500"
               },
               {
                 icon: Cpu,
-                title: "Edge Resilience",
-                desc: "No internet? No problem. Localized processing ensures lightning-fast response times and uninterrupted automation.",
+                title: "Works Without Wi-Fi",
+                desc: "Farm internet is down? No worries. Our smart sensors keep working and adjusting your greenhouse climate automatically, even offline.",
                 accent: "bg-brand-500"
               },
               {
                 icon: Smartphone,
-                title: "Seamless Ecosystem",
-                desc: "A single, intuitive application to monitor analytics, set safety limits, and control your entire home seamlessly.",
+                title: "Your Farm on Your Phone",
+                desc: "One easy-to-use app lets you check your farm's temperature, humidity, and CO2 from anywhere. Complete control, right in your pocket.",
                 accent: "bg-teal-500"
               }
             ].map((feature, i) => (
@@ -109,7 +109,7 @@ export default function Home() {
                 
                 <div className="relative z-10 mt-auto pt-4 flex items-center text-brand-600 font-bold text-sm tracking-tight opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-500">
                   <Link to="/solutions" className="flex items-center hover:underline">
-                    Learn Tech Specs <ChevronRight className="w-4 h-4 ml-1" />
+                    Explore Solutions <ChevronRight className="w-4 h-4 ml-1" />
                   </Link>
                 </div>
               </motion.div>

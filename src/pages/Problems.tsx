@@ -1,56 +1,44 @@
 import { motion } from 'motion/react';
 import type { Variants } from 'motion/react';
 
-import {
-  Banknote,
-  Zap,
-  ShieldAlert,
-  WifiOff,
-  Headphones,
-  RefreshCcw,
-} from 'lucide-react';
+
+import { Banknote, Grid, ShieldAlert, WifiOff, Headphones, BarChart3 } from 'lucide-react';
 
 const problems = [
   {
-    title: 'Expensive Systems',
-    description:
-      'Most smart home systems are luxury items out of reach for the average household.',
+    title: 'Expensive Equipment',
+    description: 'Imported CO2, temp, and RH controllers are too expensive for average growers.',
     icon: Banknote,
     color: 'bg-emerald-50 text-emerald-600',
   },
   {
-    title: 'Complex Wiring',
-    description:
-      'Traditional automation requires tearing down walls and extensive rewiring.',
-    icon: Zap,
+    title: 'Fragmented Tracking',
+    description: 'Using separate meters for different metrics leads to disconnected data and manual logging.',
+    icon: Grid,
     color: 'bg-blue-50 text-blue-600',
   },
   {
-    title: 'Safety Risks',
-    description:
-      'Lack of built-in surge, fire, or water protection puts expensive appliances at risk.',
+    title: 'Micro-Climate Shock',
+    description: 'Unnoticed spikes in RH or drops in CO2 can ruin crops before you even spot them.',
     icon: ShieldAlert,
     color: 'bg-red-50 text-red-600',
   },
   {
-    title: 'No Offline Control',
-    description:
-      "If the internet goes down, your smart home shouldn't stop working.",
+    title: 'Cloud Dependency',
+    description: 'Most smart monitors stop tracking and analyzing data if the farm internet drops.',
     icon: WifiOff,
     color: 'bg-slate-50 text-slate-600',
   },
   {
-    title: 'Poor Support',
-    description:
-      'Imported products often lack reliable local after-sales service and warranty.',
+    title: 'Hardware Failures',
+    description: 'Delicate sensors often fail under local voltage spikes and high greenhouse humidity.',
     icon: Headphones,
     color: 'bg-purple-50 text-purple-600',
   },
   {
-    title: 'Retrofit Challenges',
-    description:
-      'Old homes are often left behind due to compatibility issues.',
-    icon: RefreshCcw,
+    title: 'No Data Analysis',
+    description: 'Basic sensors only show raw numbers without analyzing trends to help maximize yield.',
+    icon: BarChart3,
     color: 'bg-orange-50 text-orange-600',
   },
 ];
