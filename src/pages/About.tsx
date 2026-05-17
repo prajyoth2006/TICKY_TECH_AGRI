@@ -7,7 +7,6 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
             
-            {/* Left Column: Text Content */}
             <div className="flex-1">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -36,7 +35,6 @@ export default function About() {
               </motion.div>
             </div>
 
-            {/* Right Column: Image & Visuals */}
             <div className="flex-1 relative">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -45,14 +43,12 @@ export default function About() {
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                 className="group relative rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-2xl z-10 aspect-square p-3"
               >
-                {/* Professional Badge */}
                 <div className="absolute top-8 right-8 z-30">
                   <div className="bg-brand-600/90 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-[0.2em] shadow-lg border border-white/20">
                     R&D Phase • IIT Patna
                   </div>
                 </div>
 
-                {/* Image Container */}
                 <div className="relative h-full w-full overflow-hidden rounded-2xl">
                   <img
                     src="https://ecell.iitp.ac.in/IC/IC.png"
@@ -61,10 +57,8 @@ export default function About() {
                     referrerPolicy="no-referrer"
                   />
 
-                  {/* Subtle Color Enhancement Overlay */}
                   <div className="absolute inset-0 bg-linear-to-tr from-navy-900/40 via-transparent to-brand-600/5" />
 
-                  {/* Modern Glassmorphism Text Block */}
                   <div className="absolute inset-x-0 bottom-0 p-8 bg-linear-to-t from-navy-900/90 via-navy-900/50 to-transparent backdrop-blur-[2px]">
                     <motion.p
                       initial={{ opacity: 0, x: -10 }}
@@ -85,7 +79,6 @@ export default function About() {
                 </div>
               </motion.div>
 
-              {/* Decorative Glow Elements */}
               <div className="absolute -bottom-12 -right-12 w-72 h-72 bg-brand-600/20 rounded-full blur-[100px] animate-pulse pointer-events-none" />
               <div className="absolute -top-12 -left-12 w-48 h-48 bg-teal-400/10 rounded-full blur-[80px] pointer-events-none" />
             </div>

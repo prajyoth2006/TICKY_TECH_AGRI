@@ -9,7 +9,6 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900 overflow-x-clip flex flex-col">
-      {/* CRITICAL FIX: Changed overflow-x-hidden to overflow-x-clip */}
       <Navbar />
       
       <main className="grow">

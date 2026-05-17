@@ -44,7 +44,6 @@ export default function Navbar() {
             </span>
           </Link>
 
-          {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <NavLink
@@ -61,7 +60,6 @@ export default function Navbar() {
               </NavLink>
             ))}
             
-            {/* --- HOME AUTOMATION DEVICE BUTTON --- */}
             <Link 
               to="https://ticky-tech-blond.vercel.app/" 
               target="_blank" 
@@ -71,7 +69,6 @@ export default function Navbar() {
               <Home className="w-4 h-4 text-brand-400 group-hover:text-white transition-colors" />
               Try Our Smart Home Solution
             </Link>
-            {/* --- END BUTTON --- */}
 
           </div>
 

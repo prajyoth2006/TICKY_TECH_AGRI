@@ -31,18 +31,14 @@ export default function Home() {
     <div className="bg-white overflow-hidden">
       <Hero />
       
-      {/* Engineered For The Future Section */}
       <section className="py-25 relative group">
         
-        {/* MATCHED TO HERO: Subtle Tech Grid Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-size-[40px_40px] mask-[linear-gradient(to_bottom,white_60%,transparent_100%)] pointer-events-none" />
         
-        {/* Soft Ambient Glow */}
         <div className="absolute left-1/2 -translate-x-1/2 top-0 -z-10 h-125 w-full max-w-4xl rounded-full bg-brand-600/5 blur-[120px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
-          {/* Section Header */}
           <div className="text-center mb-24">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
@@ -108,8 +104,8 @@ export default function Home() {
                 </p>
                 
                 <div className="relative z-10 mt-auto pt-4 flex items-center text-brand-600 font-bold text-sm tracking-tight opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-500">
-                  <Link to="/solutions" className="flex items-center hover:underline">
-                    Explore Solutions <ChevronRight className="w-4 h-4 ml-1" />
+                  <Link to="/products" className="flex items-center hover:underline">
+                    Explore Products <ChevronRight className="w-4 h-4 ml-1" />
                   </Link>
                 </div>
               </motion.div>

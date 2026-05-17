@@ -6,12 +6,10 @@ export default function Footer() {
 
   return (
     <footer className="bg-navy-900 text-white pt-20 pb-10 overflow-hidden relative">
-      {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-600/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          {/* Company Identity */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center space-x-2 group">
               <div className="bg-brand-600 p-1.5 rounded-lg group-hover:scale-110 transition-transform">
@@ -41,19 +39,17 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="text-lg font-bold mb-6 font-display">Quick Links</h4>
             <ul className="space-y-4 text-slate-400">
               <li><Link to="/about" className="hover:text-brand-600 transition-colors">About Us</Link></li>
-              <li><Link to="/solutions" className="hover:text-brand-600 transition-colors">Solutions</Link></li>
+              <li><Link to="/solutions" className="hover:text-brand-600 transition-colors">Why Choose Us</Link></li>
               <li><Link to="/problems" className="hover:text-brand-600 transition-colors">Problems</Link></li>
               <li><Link to="/team" className="hover:text-brand-600 transition-colors">Our Team</Link></li>
               <li><Link to="/contact" className="hover:text-brand-600 transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
-          {/* Support */}
           <div>
             <h4 className="text-lg font-bold mb-6 font-display">Support</h4>
             <ul className="space-y-4 text-slate-400">
@@ -65,7 +61,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h4 className="text-lg font-bold mb-6 font-display">Contact Us</h4>
             <ul className="space-y-4 text-slate-400">

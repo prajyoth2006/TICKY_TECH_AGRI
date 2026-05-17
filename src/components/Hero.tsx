@@ -12,7 +12,6 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
-  // Animation variants for floating elements
   const floatingAnimation = {
     y: [0, -15, 0],
     transition: {
@@ -33,10 +32,8 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[90vh] pt-32 pb-20 lg:pt-0 lg:pb-0 overflow-hidden bg-white flex items-center">
-      {/* Subtle Tech Grid Background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-size-[40px_40px] pointer-events-none" />
       
-      {/* Soft Glow Orbs - Tinted slightly greener for agriculture vibe */}
       <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-200 h-200 bg-emerald-600/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-150 h-150 bg-teal-400/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -92,8 +89,8 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4"
             >
-              <Link to="/solutions" className="w-full sm:w-auto bg-navy-900 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center shadow-lg shadow-navy-900/20 active:scale-95 group">
-                Explore Solutions
+              <Link to="/products" className="w-full sm:w-auto bg-navy-900 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center shadow-lg shadow-navy-900/20 active:scale-95 group">
+                Explore Products
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link to="/contact" className="w-full sm:w-auto bg-white border-2 border-slate-200 text-slate-700 px-8 py-4 rounded-full font-bold text-lg hover:border-emerald-600 hover:text-emerald-600 transition-all duration-300 active:scale-95 text-center shadow-sm">

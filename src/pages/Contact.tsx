@@ -7,7 +7,6 @@ export default function Contact() {
       <section id="contact" className="bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-20">
-            {/* Contact Information */}
             <div className="flex-1">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -57,7 +56,6 @@ export default function Contact() {
               </motion.div>
             </div>
 
-            {/* Contact Form */}
             <div className="flex-1">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
