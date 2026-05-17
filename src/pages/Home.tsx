@@ -103,7 +103,7 @@ export default function Home() {
                   {feature.desc}
                 </p>
                 
-                <div className="relative z-10 mt-auto pt-4 flex items-center text-brand-600 font-bold text-sm tracking-tight opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-500">
+                <div className="relative z-10 mt-auto pt-4 flex items-center text-brand-600 font-bold text-sm tracking-tight opacity-100 translate-x-0 md:opacity-0 md:-translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
                   <Link to="/products" className="flex items-center hover:underline">
                     Explore Products <ChevronRight className="w-4 h-4 ml-1" />
                   </Link>
