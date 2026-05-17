@@ -21,7 +21,7 @@ export default function Footer() {
             </Link>
             <p className="text-slate-400 leading-relaxed text-sm">
               Revolutionizing IoT with affordable, safe, and future-ready 
-              automation for the modern Indian home and industry.
+              automation for the modern Farming.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-brand-600 transition-colors">
