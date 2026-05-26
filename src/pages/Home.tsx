@@ -3,6 +3,13 @@ import { motion, Variants } from 'motion/react';
 import { ShieldCheck, Smartphone, Cpu, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+import About from './About';
+import Problems from './Problems';
+import Solutions from './Solutions';
+import Products from './Products';
+import Team from './Team';
+import Contact from './Contact';
+
 export default function Home() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -28,7 +35,7 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-white overflow-hidden">
+    <div id = "home"className="bg-white overflow-hidden">
       <Hero />
       
       <section className="py-25 relative group">
@@ -104,15 +111,22 @@ export default function Home() {
                 </p>
                 
                 <div className="relative z-10 mt-auto pt-4 flex items-center text-brand-600 font-bold text-sm tracking-tight opacity-100 translate-x-0 md:opacity-0 md:-translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
-                  <Link to="/products" className="flex items-center hover:underline">
+                  <a href='#products' className="flex items-center hover:underline">
                     Explore Products <ChevronRight className="w-4 h-4 ml-1" />
-                  </Link>
+                  </a>
                 </div>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
+
+      <About />
+      <Problems />
+      <Solutions />
+      <Products />
+      <Team />
+      <Contact />
     </div>
   );
 }
