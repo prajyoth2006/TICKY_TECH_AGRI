@@ -33,7 +33,7 @@ export default function Home() {
   };
 
   return (
-    <div id = "home"className="bg-white overflow-hidden">
+    <div id = "home"className="bg-white overflow-clip">
       <Hero />
       
       <section className="py-25 relative group">
