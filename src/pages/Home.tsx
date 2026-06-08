@@ -1,7 +1,6 @@
 import Hero from '../components/Hero';
 import { motion, Variants } from 'motion/react'; 
 import { ShieldCheck, Smartphone, Cpu, ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 import About from './About';
 import Problems from './Problems';
