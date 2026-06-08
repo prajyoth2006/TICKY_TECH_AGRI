@@ -7,7 +7,6 @@ import About from './About';
 import Problems from './Problems';
 import Solutions from './Solutions';
 import Products from './Products';
-import Team from './Team';
 import Contact from './Contact';
 
 export default function Home() {
@@ -121,11 +120,10 @@ export default function Home() {
         </div>
       </section>
 
-      <About />
       <Problems />
       <Solutions />
       <Products />
-      <Team />
+      <About />
       <Contact />
     </div>
   );

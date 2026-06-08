@@ -9,7 +9,6 @@ const navLinks = [
   { name: 'Problems', to: '#problems' },
   { name: 'Why Choose Us', to: '#solutions' },
   { name: 'Products', to: '#products' },
-  { name: 'Team', to: '#team' },
   { name: 'Contact', to: '#contact' },
 ];
 
